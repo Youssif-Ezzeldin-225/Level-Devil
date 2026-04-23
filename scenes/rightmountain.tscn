@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://vgl6jytvn0ac"]
+
+[ext_resource type="Texture2D" uid="uid://dusu1xlbyegls" path="res://assets/right mountain.png" id="1_kc7tw"]
+
+[node name="right mountain" type="AnimatableBody2D" unique_id=483929767]
+z_index = 1
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=89987578]
+position = Vector2(571.5, 135)
+scale = Vector2(1.4646019, 1.4060606)
+texture = ExtResource("1_kc7tw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1510969581]
+polygon = PackedVector2Array(769, 240, 747, 227, 737, 228, 720, 217, 707, 193, 702, 187, 692, 182, 681, 178, 672, 174, 658, 171, 640, 169, 624, 168, 618, 163, 584, 165, 579, 164, 556, 132, 542, 116, 525, 102, 513, 94, 500, 71, 497, 68, 484, 68, 478, 63, 466, 61, 460, 58, 444, 37, 428, 26, 418, 21, 403, 21, 392, 30, 384, 40, 372, 49, 367, 56, 356, 62, 357, 243, 394, 240, 442, 247, 477, 249, 537, 249, 555, 247, 571, 245, 585, 243, 602, 241, 611, 239)

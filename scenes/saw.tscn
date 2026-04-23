@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://b4qa1now0ltkt"]
+
+[ext_resource type="Script" uid="uid://bmf6uadr8s3rf" path="res://scripts/saw.gd" id="1_846d5"]
+[ext_resource type="Texture2D" uid="uid://yxxg6nptc4em" path="res://assets/Traps/saw_idle.png" id="2_846d5"]
+[ext_resource type="PackedScene" uid="uid://bdtksceow1qag" path="res://scenes/killzone.tscn" id="2_kprxg"]
+
+[sub_resource type="Animation" id="Animation_846d5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kprxg"]
+resource_name = "resize"
+length = 1.4666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_846d5"]
+_data = {
+&"RESET": SubResource("Animation_846d5"),
+&"resize": SubResource("Animation_kprxg")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_161w5"]
+atlas = ExtResource("2_846d5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxxip"]
+atlas = ExtResource("2_846d5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw68n"]
+atlas = ExtResource("2_846d5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_878ni"]
+atlas = ExtResource("2_846d5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi3xb"]
+atlas = ExtResource("2_846d5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_578c5"]
+atlas = ExtResource("2_846d5")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_171r5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_161w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxxip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw68n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_878ni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi3xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_578c5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_846d5"]
+
+[node name="Node2D" type="AnimatableBody2D" unique_id=1501295727]
+position = Vector2(4, 0)
+script = ExtResource("1_846d5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=711516696]
+libraries/ = SubResource("AnimationLibrary_846d5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1284294164]
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_171r5")
+autoplay = "default"
+
+[node name="Killzone" parent="." unique_id=755643887 instance=ExtResource("2_kprxg")]
+position = Vector2(0, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1048876801]
+shape = SubResource("CircleShape2D_846d5")

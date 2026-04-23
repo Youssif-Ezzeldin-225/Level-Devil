@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cn1lp83v37tiy"]
+
+[ext_resource type="Texture2D" uid="uid://ctsmi0xfh57wk" path="res://assets/Doors.png" id="1_7ct4w"]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=705551821]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=693481075]
+position = Vector2(27.25, -9.75)
+scale = Vector2(3.21875, 0.3671875)
+texture = ExtResource("1_7ct4w")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1135391407]
+polygon = PackedVector2Array(2, -21, 10, -21, 11, -14, 43, -14, 43, -21, 53, -21, 53, 1, 44, 2, 43, -10, 11, -9, 11, 2, 1, 2)

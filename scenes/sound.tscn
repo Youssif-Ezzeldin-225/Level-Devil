@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cxshhsg4qehhg"]
+
+[ext_resource type="AudioStream" uid="uid://cl54duvm6t63y" path="res://assets/piemert-gnork-party-improved-171719.mp3" id="1_ii1ul"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=988737362]
+stream = ExtResource("1_ii1ul")
+volume_db = -5.832
+autoplay = true
+bus = &"Music"

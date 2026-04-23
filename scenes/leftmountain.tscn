@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ttm8kqpwks7y"]
+
+[ext_resource type="Texture2D" uid="uid://bqlgbpmdx1rii" path="res://assets/left mountain.png" id="1_wb4uc"]
+
+[node name="left mountain" type="AnimatableBody2D" unique_id=483929767]
+z_index = 1
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=89987578]
+position = Vector2(571.5, 135)
+scale = Vector2(1.4646019, 1.4060606)
+texture = ExtResource("1_wb4uc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1569403421]
+polygon = PackedVector2Array(407, 238, 421, 234, 433, 225, 450, 208, 471, 190, 497, 179, 518, 160, 524, 159, 541, 129, 551, 127, 551, 127, 575, 104, 585, 102, 593, 103, 602, 106, 615, 112, 619, 113, 624, 107, 635, 102, 652, 95, 662, 90, 671, 76, 679, 63, 690, 54, 698, 42, 725, 63, 734, 61, 735, 242, 710, 243, 702, 241, 409, 241)
